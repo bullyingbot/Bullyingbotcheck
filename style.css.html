@@ -1,0 +1,147 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>AI Content Analyzer</h1>
+        <button id="darkModeToggle">Toggle Dark Mode</button>
+    </header>
+
+    <main>
+        <textarea id="textInput" placeholder="Enter text for analysis..."></textarea>
+        <input type="file" id="imageInput" accept="image/*">
+        <button onclick="analyzeContent()">Analyze</button>
+
+        <div id="imagePreview"></div>
+        <div id="loading" class="hidden">Analyzing...</div>
+        <div id="result"></div>
+    </main>
+
+    <footer>
+        <marquee behavior="scroll" direction="left">
+            Developed by Wendy, Computer Science Department, Esfam University.
+        </marquee>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<style>/* Luxurious Dark Theme with Gold Accents */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #121212;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background: linear-gradient(90deg, #1e1e1e, #282828);
+    color: #d4af37;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(212, 175, 55, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+button {
+    background: #d4af37;
+    color: #121212;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #b88e2f;
+    transform: scale(1.05);
+}
+
+textarea, input {
+    width: 80%;
+    max-width: 500px;
+    padding: 12px;
+    margin: 10px auto;
+    display: block;
+    border: 2px solid #d4af37;
+    border-radius: 5px;
+    background: #1e1e1e;
+    color: #fff;
+    font-size: 16px;
+}
+
+#imagePreview img {
+    max-width: 250px;
+    margin-top: 15px;
+    border: 2px solid #d4af37;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(212, 175, 55, 0.5);
+}
+
+#loading {
+    font-size: 18px;
+    font-weight: bold;
+    color: #d4af37;
+    margin-top: 15px;
+}
+
+#result {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    background: #1e1e1e;
+    box-shadow: 0 4px 10px rgba(212, 175, 55, 0.4);
+}
+
+/* Footer Marquee */
+footer {
+    background: #1e1e1e;
+    color: #d4af37;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+}
+
+marquee {
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+.dark-mode {
+    background: #1e1e1e;
+    color: #d4af37;
+}
+
+@media (max-width: 768px) {
+    textarea, input {
+        width: 90%;
+    }
+
+    button {
+        width: 90%;
+    }
+}
+</style>
